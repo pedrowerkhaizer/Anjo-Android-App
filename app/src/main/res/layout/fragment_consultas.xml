@@ -1,0 +1,131 @@
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:background="@color/white"--><!--android:orientation="vertical"--><!--tools:context="fragment.ConsultasFragment">-->
+
+<!--<LinearLayout--><!--android:id="@+id/toolbarConsultas"--><!--android:layout_width="match_parent"--><!--android:layout_height="56dp"--><!--android:background="@color/white"--><!--android:elevation="0dp">-->
+
+<!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="56dp"--><!--android:orientation="horizontal">-->
+
+<!--<LinearLayout--><!--android:id="@+id/llEspConsultas"--><!--android:layout_width="wrap_content"--><!--android:layout_height="56dp"--><!--android:layout_centerInParent="true"--><!--android:gravity="center_vertical"--><!--android:orientation="horizontal">-->
+
+<!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginStart="8dp"--><!--android:layout_marginTop="8dp"--><!--android:layout_marginEnd="8dp"--><!--android:layout_marginBottom="8dp"--><!--android:fontFamily="@font/raleway_semibold"--><!--android:text="Consultas"--><!--android:textColor="@color/colorPrimary"--><!--android:textSize="18sp"--><!--app:layout_constraintBottom_toBottomOf="parent"--><!--app:layout_constraintEnd_toEndOf="parent"--><!--app:layout_constraintStart_toStartOf="parent"--><!--app:layout_constraintTop_toTopOf="parent" />--><!--</LinearLayout>-->
+
+<!--<ImageButton--><!--android:id="@+id/btnFiltrosConsultas"--><!--android:layout_width="46dp"--><!--android:layout_height="56dp"--><!--android:layout_alignParentEnd="true"--><!--android:layout_marginTop="8dp"--><!--android:layout_marginEnd="16dp"--><!--android:layout_marginBottom="8dp"--><!--android:background="?selectableItemBackgroundBorderless"--><!--android:src="@drawable/outline_filter_list_24" />-->
+
+<!--</RelativeLayout>--><!--</LinearLayout>-->
+
+<!--<com.ogaclejapan.smarttablayout.SmartTabLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--android:id="@id/viewpagertab"--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/tab_height"--><!--android:clipToPadding="true"--><!--android:paddingLeft="4dp"--><!--android:paddingRight="4dp"--><!--app:stl_customTabTextLayoutId="@layout/custom_tab_like_a_medium"--><!--app:stl_defaultTabTextHorizontalPadding="18dp"--><!--app:stl_dividerColor="@android:color/transparent"--><!--app:stl_dividerThickness="0dp"--><!--app:stl_indicatorThickness="0dp"--><!--app:stl_underlineColor="@android:color/transparent"--><!--app:stl_underlineThickness="0dp" />-->
+
+<!--<androidx.viewpager.widget.ViewPager--><!--android:id="@+id/viewpager"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:layout_marginStart="18dp"--><!--android:layout_marginEnd="18dp"/>-->
+
+
+<!--</LinearLayout>-->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="fragment.ConsultasFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        android:foregroundTint="@color/white"
+        android:showDividers="none">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <LinearLayout
+                android:id="@+id/toolbarConsultas"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/white"
+                android:elevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llEspConsultas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Consultas"
+                            style="@style/H2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/btnFiltrosConsultas"
+                        android:layout_width="46dp"
+                        android:layout_height="56dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:src="@drawable/outline_filter_list_24" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@id/viewpagertab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_height"
+            android:clipToPadding="true"
+            android:elevation="0dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            app:stl_customTabTextLayoutId="@layout/custom_tab_like_a_medium"
+            app:stl_defaultTabTextHorizontalPadding="8dp"
+            app:stl_distributeEvenly="true"
+            app:stl_dividerColor="@android:color/transparent"
+            app:stl_dividerThickness="0dp"
+            app:stl_indicatorThickness="0dp"
+            app:stl_underlineColor="@android:color/transparent"
+            app:stl_underlineThickness="0dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

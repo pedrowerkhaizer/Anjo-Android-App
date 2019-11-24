@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".horariosDispActivity">
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView23"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:layout_marginEnd="16dp"-->
+    <!--android:text="Gerar os botões de horarios de acordo com:-->
+    <!--1) Duração média de consulta do médico selecionado-->
+    <!--2) Intervalo entre consultas-->
+    <!--3) Horário de atendimento-->
+    <!--4) Horários não selecionados-->
+    <!--Mostrar os horários de acordo com:-->
+    <!--1) Intervalo de datas selecionado-->
+    <!--2) Horários a partir do horário do celular (crescente)"-->
+    <!--android:textSize="18sp"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/nscrollHorarios"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/nscrollHorarios" />-->
+
+    <RelativeLayout
+        android:id="@+id/clayoutHHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnCloseHorariosMed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/previusButton"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tvListHorarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/H2"
+            android:text="Horários" />
+
+        <Button
+            android:id="@+id/btnDatas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            style="@style/doneButton"
+            android:drawableEnd="@drawable/ic_calendar" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

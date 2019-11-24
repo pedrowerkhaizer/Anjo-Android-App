@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".adicionarConvenioActivity">
+
+
+    <Button
+        android:id="@+id/btnCloseConvenio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        style="@style/previusButton"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCloseConvenio"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/white_cornered"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/H1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/qual_seu_convenio" />
+
+
+        <AutoCompleteTextView
+            android:id="@+id/txtNomeConvenio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/ex_convenio"
+            android:inputType="textCapSentences" />
+
+        <Button
+            android:id="@+id/btnAdcNovoConvenio"
+            style="@style/basicButton"
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:layout_gravity="end"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/n_to_achando_meu_convenio" />
+
+        <Button
+            android:id="@+id/btnProxNumConvenio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="@string/esse_ai_mesmo"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAnalogous"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

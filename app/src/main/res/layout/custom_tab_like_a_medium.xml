@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_text"
+    android:layout_width="wrap_content"
+    android:minWidth="23mm"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:textAllCaps="true"
+    style="@style/H4"
+    android:textColor="@drawable/custom_tab_like_a_medium_selector"
+    tools:ignore="InOrMmUsage">
+
+</TextView>

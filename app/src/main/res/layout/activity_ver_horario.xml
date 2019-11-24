@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".VerHorarioActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/navBar_confirmar_horario"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btnVoltarHorario"
+            style="@style/previusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/btnSettingsHorario"
+            style="@style/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:drawableEnd="@drawable/ic_settings" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="@string/confirmar_horario"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/container_perfil_med"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civFoto_med_horario"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nome_med_display_horario"
+                        style="@style/H2MS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dr.Rodrigo"
+                        android:textColor="@color/materialGray900" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/esp_med_display_horario"
+                            style="@style/H3MS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Cardiologista" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="|" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/ic_favorite_black_24dp"
+                            android:tint="@color/red" />
+
+                        <TextView
+                            android:id="@+id/rating_med_display_horario"
+                            style="@style/H3MS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:text="4.5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/H4MS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CRM:" />
+
+                        <TextView
+                            android:id="@+id/crm_display_horario"
+                            style="@style/H4MS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="000000001" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sep0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/container_perfil_med"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/materialGray200"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/container_dia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_perfil_med"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_calendar"
+                    android:tint="@color/materialGray800" />
+
+
+                <TextView
+                    android:id="@+id/dia_display_horario"
+                    style="@style/H3MS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sep1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/container_dia"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/materialGray200"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/container_horario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sep1"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_clock"
+                    android:tint="@color/materialGray800" />
+
+
+                <TextView
+                    android:id="@+id/horario_display_horario"
+                    style="@style/H3MS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="17:30" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sep2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/container_horario"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/materialGray200"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/container_endereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sep2"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/outline_room_24"
+                    android:tint="@color/materialGray800" />
+
+
+                <TextView
+                    android:id="@+id/endereco_display_horario"
+                    style="@style/H3MS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Av. Jorge Zarur, 274, Vila Ema, São José dos Campos" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sep3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/container_endereco"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/materialGray200"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/containerButtonsHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sep3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="64dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="64dp"
+                    android:background="@drawable/button_background"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_messenger"
+                        android:tint="@color/colorPrimary" />
+
+                    <Button
+                        android:id="@+id/btn_mensagem_horario"
+                        style="@style/primaryButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@color/fui_transparent"
+                        android:text="Enviar uma mensagem"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_editar_horario"
+                    style="@style/primaryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="64dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="64dp"
+                    android:text="Editar horário"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_cancelar_horario"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="64dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="64dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/red"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Cancelar horário"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btnProxima_horario"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="64dp"
+                        android:layout_marginTop="110dp"
+                        android:layout_marginRight="64dp"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/colorPrimaryDarkest"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Status: Próxima"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btnAberto_horario"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="64dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="64dp"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/colorPrimaryDarkest"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Status: Aberta"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btnConcluida_horario"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="64dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="64dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/colorPrimaryDarkest"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Status: Concluída"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

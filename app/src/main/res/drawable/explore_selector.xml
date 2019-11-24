@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:src="@drawable/ic_compass_default" />
+    <item android:src="@drawable/ic_compass_default" android:state_checkable="false" />
+    <item android:src="@drawable/ic_compass_activated" android:state_checked="true" />
+    <item android:src="@drawable/ic_compass_default" android:state_selected="false" />
+    <item android:src="@drawable/ic_compass_activated" android:state_selected="true" />
+    <item android:src="@drawable/ic_compass_default" android:state_activated="false" />
+    <item android:src="@drawable/ic_compass_activated" android:state_activated="true" />
+
+</selector>

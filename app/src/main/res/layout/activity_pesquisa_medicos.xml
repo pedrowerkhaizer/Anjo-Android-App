@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".pesquisaMedicosActivity">
+
+    <FrameLayout
+        android:id="@+id/containerBusca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <EditText
+            android:id="@+id/sedtMedicos"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/white_cornered"
+            android:backgroundTint="@color/materialGray50"
+            android:drawableTint="@color/materialGray600"
+            android:fontFamily="@font/montserrat"
+            android:hint="Natalia Werkhaizer"
+            android:paddingStart="52dp"
+            android:paddingEnd="44dp"
+            android:singleLine="true"
+            android:textColor="@color/materialGray700" />
+
+        <ImageButton
+            android:id="@+id/btnClosePesquisaMed"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="32dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close_24dp"
+            android:tint="@color/materialGray600"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/btnSearchPesquisaMed"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="24dp"
+            android:background="@color/fui_transparent"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@drawable/ic_search_24dp"
+            android:tint="@color/materialGray600" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPesquisaMedicos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/containerBusca"
+        android:visibility="invisible"></androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/containerInfoPesquisaMedicos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/containerBusca"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_pesquisaMedicos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Ache seus anjos conhecidos"
+            style="@style/H1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            style="@style/H3"
+            android:textColor="@color/materialGray700"
+            android:textStyle="normal"
+            android:text="Procure pelo nome do anjo ou pelo seu CRM" />
+    </LinearLayout>
+
+
+</RelativeLayout>

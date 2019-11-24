@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <Button
+        android:id="@+id/btnItem"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/real_white_cornered"
+        android:clickable="true"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        android:text="16:00"
+        android:textColor="#A6000000" />
+</LinearLayout>

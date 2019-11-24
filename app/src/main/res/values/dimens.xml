@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="bottom_navigation_height">48dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+</resources>

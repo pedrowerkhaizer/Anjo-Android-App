@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="fragment.PerfilFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/perfilFotoCIV"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:cropToPadding="true"
+                    android:elevation="2dp"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@color/materialGray200"
+                    android:transitionName="fotoPerfil" />
+
+
+                <TextView
+                    android:id="@+id/perfilNomeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/perfilFotoCIV"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    style="@style/H2"
+                    android:textStyle="normal"
+                    android:textColor="@color/materialGray900"/>
+
+                <TextView
+                    android:id="@+id/perfilEmailTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/perfilNomeTV"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/materialGray600"
+                    android:textSize="18sp"
+                    android:transitionName="nomePerfil"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnDisplayPerfil"
+                    style="@style/primaryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22sp"
+                    android:layout_below="@+id/perfilEmailTV"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Ver perfil" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/materialGray200" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <Button
+                    android:id="@+id/alergiasPerfilBTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fui_transparent"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:text="Alergias"
+                    android:textColor="@color/colorAnalogous" />
+
+                <Button
+                    android:id="@+id/historicoPerfilBTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fui_transparent"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:text="Historico"
+                    android:textColor="@color/colorAnalogous" />
+
+                <Button
+                    android:id="@+id/aspectosFisicosPerfilBTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fui_transparent"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:text="Aspectos Físicos"
+                    android:textColor="@color/colorAnalogous" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Configurações da conta"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:id="@+id/llEditarPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="?selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/fui_transparent"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_profile"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/materialGray700"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Informações pessoais"
+                    android:textAllCaps="false"
+                    android:textColor="@color/materialGray700"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/materialGray200" />
+
+            <LinearLayout
+                android:id="@+id/llEditarNotificacoes"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/fui_transparent"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_notification"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/materialGray700"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Notificações"
+                    android:textAllCaps="false"
+                    android:textColor="@color/materialGray700"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/materialGray200" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="ATENDIMENTO"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:id="@+id/llAtendimentoPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/fui_transparent"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_ajuda"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/materialGray700"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Obtenha ajuda"
+                    android:textAllCaps="false"
+                    android:textColor="@color/materialGray700"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/materialGray200" />
+
+            <LinearLayout
+                android:id="@+id/llFeedbackPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/fui_transparent"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_feedback"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/materialGray700"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Envie-nos seu feedback"
+                    android:textAllCaps="false"
+                    android:textColor="@color/materialGray700"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/materialGray200" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Jurídico"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:id="@+id/llJuridicoPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/fui_transparent"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_term"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/materialGray700"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Termos de Serviço"
+                    android:textAllCaps="false"
+                    android:textColor="@color/materialGray700"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/materialGray200" />
+
+            <LinearLayout
+                android:id="@+id/llSairPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:drawableStart="@drawable/ic_close_24dp"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/materialGray400"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Sair da conta"
+                    android:textAllCaps="false"
+                    android:textColor="@color/materialGray400"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/materialGray200" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="VERSÃO 1.0.0(010619)"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".completarConvenioActivity">
+
+
+    <Button
+        android:id="@+id/btnBackConvenioNum"
+        style="@style/previusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBackConvenioNum"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/white_cornered"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/H1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/qual_o_numero_do_seu_convenio" />
+
+
+        <EditText
+            android:id="@+id/txtNumConvenio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/ex_num_convenio"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnAjudaNumConvenio"
+            style="@style/basicButton"
+            android:layout_width="wrap_content"
+            android:layout_height="20sp"
+            android:layout_gravity="end"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/onde_eu_vejo_isso" />
+
+        <Button
+            android:id="@+id/btnAttConvenio"
+            style="@style/primaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/pronto" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

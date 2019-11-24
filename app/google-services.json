@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "348045212545",
+    "firebase_url": "https://anjo-agendamedica.firebaseio.com",
+    "project_id": "anjo-agendamedica",
+    "storage_bucket": "anjo-agendamedica.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348045212545:android:2e3b908d98539fd9",
+        "android_client_info": {
+          "package_name": "com.werkhaizer.anjo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348045212545-8i77hm4855cnrp0dnaekg0s9hcuq4frf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.werkhaizer.anjo",
+            "certificate_hash": "73ec719218755ccfb48e12819a2bcd71429f9308"
+          }
+        },
+        {
+          "client_id": "348045212545-gm0hcm6sqe856s99e478lnaioneme2j4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlRd2RtsZhzWzBJ_FsbaYNXcY0qnp-3zQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348045212545-hfm2lelhoqu748r26jg3s5f6esaijibj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

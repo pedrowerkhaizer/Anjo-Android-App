@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PerfilDisplayActivity">
+
+    <RelativeLayout
+        android:id="@+id/navBar_perfil_display"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btnBackPerfilDs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/previusButton"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/H2"
+            android:layout_centerInParent="true"
+            android:text="Paciente" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navBar_perfil_display">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/foto_perfil_display"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:cropToPadding="true"
+                android:elevation="2dp" />
+
+            <TextView
+                android:id="@+id/nome_perfil_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/H2"
+                android:layout_below="@+id/foto_perfil_display"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/materialGray900" />
+
+            <LinearLayout
+                android:id="@+id/container_idade_consultas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nome_perfil_display"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/idade_perfil_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/H3"
+                    android:text="18 anos" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    style="@style/H4"
+                    android:text="|" />
+
+                <TextView
+                    android:id="@+id/qtdConsultas_perfil_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/H3"
+                    android:text="32 Consultas"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/convenio_perfil_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/H4"
+                android:layout_below="@+id/container_idade_consultas"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="unimed-rj"
+                android:textAllCaps="true" />
+
+            <LinearLayout
+                android:id="@+id/separador_display"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/convenio_perfil_display"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/materialGray200"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/container_info_perfil_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/separador_display"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    style="@style/H3"
+                    android:text="Aspectos fisícos"
+                    android:textAllCaps="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_regua"
+                        android:tint="@color/materialGray800" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        style="@style/H3"
+                        android:text="Altura: " />
+
+                    <TextView
+                        android:id="@+id/altura_perfil_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        style="@style/H3"
+                        android:textStyle="normal"
+                        android:textColor="@color/materialGray700"
+                        android:text="179cm" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_peso"
+                        android:tint="@color/materialGray800" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        style="@style/H3"
+                        android:text="Peso: " />
+
+                    <TextView
+                        android:id="@+id/peso_perfil_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        style="@style/H3"
+                        android:textStyle="normal"
+                        android:textColor="@color/materialGray700"
+                        android:text="77kg" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/materialGray200"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    style="@style/H3"
+                    android:text="Observações do paciente"
+                    android:textAllCaps="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Aqui vão suas observações para o anjo" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_messenger"
+                        android:tint="@color/colorPrimary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/H3"
+                        android:paddingStart="8dp"
+                        android:text="abrir conversa com paciente"
+                        android:textColor="@color/colorAnalogous"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

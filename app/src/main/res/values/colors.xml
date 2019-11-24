@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3360fe</color>
+    <color name="Primary35">#59003FFA</color>
+    <color name="colorPrimaryDarkest">#003ffa</color>
+    <color name="colorPrimaryLight">#657dff</color>
+    <color name="colorAccent">#60E1E0</color>
+
+
+    <color name="colorPrimaryTransparent">#80005AFF</color>
+
+    <color name="colorTransparentGrey">#3a666666</color>
+
+    <color name="black">#ffffff</color>
+    <color name="black_20">#33000000</color>
+
+    
+    <color name="materialGray900">#212121</color>
+    <color name="materialGray800">#424242</color>
+    <color name="materialGray700">#616161</color>
+    <color name="materialGray600">#757575</color>
+
+    <color name="materialGray400">#939393</color>
+    <color name="materialGray300">#C8C8C8</color>
+    <color name="materialGray200">#eeeeee</color>
+    <color name="materialGray100">#f5f5f5</color>
+    <color name="materialGray50">#F8F8F8</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="colorAnalogous">#336AFE</color>
+    <color name="colorComplementary">#e69200</color>
+
+    <color name="medium_text_enabled">#FF000000</color>
+    <color name="medium_text_disabled">#4D000000</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="popup_bg">#01000000</color>
+    <color name="listaEsp_bg">#90ffffff</color>
+    <color name="secondary_text_material_dark">#b3000000</color>
+    <color name="text_color_secondary">#89ffffff</color>
+    <color name="gray_15_transparent">#26000000</color>
+    <color name="gray_9_transparent">#17000000</color>
+    <color name="gray_5_transparent">#0D000000</color>
+
+</resources>

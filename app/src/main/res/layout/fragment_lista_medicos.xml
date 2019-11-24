@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorFiltroMed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="fragment.ListaMedicosFragment">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="0dp"
+        app:layout_collapseMode="pin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llTitleMedicos"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnEspecialidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:paddingStart="16dp"
+                    android:text="Cardiologia"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingEnd="56dp"
+                    android:src="@drawable/ic_arrow_drop_down_24dp"
+                    android:tint="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/svMedicos"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@+id/btnFiltros"
+                android:paddingLeft="72dp"
+                android:src="@drawable/ic_search_24dp"
+                android:background="?selectableItemBackgroundBorderless" />
+
+            <ImageButton
+                android:id="@+id/btnFiltros"
+                android:layout_width="46dp"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/outline_filter_list_24" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMedicos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clErroListaMed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="invisible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lootieErro"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/e404" />
+
+            <TextView
+                android:id="@+id/tvErroListaMedico"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="Não conseguimos encontrar nenhum anjo por aqui :("
+                android:textColor="?attr/colorControlNormal"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lootieErro" />
+
+            <TextView
+                android:id="@+id/tvSugestaoListaMedica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="que tal procurar por outra especialidade?"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvErroListaMedico" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

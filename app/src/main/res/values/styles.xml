@@ -1,0 +1,166 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="H1" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/materialGray900</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="H2" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="H2MS" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="H3" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/materialGray800</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="H3MS" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/materialGray800</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="H4" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/materialGray700</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="H4MS" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/materialGray700</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="H5" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/materialGray700</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="paragraph" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/materialGray800</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="primaryButton" parent="android:Widget.Button">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="basicButton" parent="android:Widget.Button">
+        <item name="android:textColor">?attr/colorControlNormal</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="previusButton" parent="android:Widget.Button">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:drawableStart">@drawable/ic_arrow_back</item>
+        <item name="android:drawableTint">@color/materialGray800</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="doneButton" parent="android:Widget.Button">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:drawableEnd">@drawable/ic_done</item>
+        <item name="android:drawableTint">@color/materialGray800</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorComplementary</item>
+
+        <item name="android:statusBarColor">@color/materialGray200</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="whiteStatus" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#fff</item>
+        <item name="colorPrimaryDark">#fff</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <!--<item name="android:statusBarColor">@color/colorTransparentGrey</item>-->
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+
+    <style name="blueStatus" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorComplementary</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDarkest</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.FloatingWindow" parent="whiteStatus">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@color/popup_bg</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+
+    </style>
+
+
+
+
+    <style name="FullscreenTheme" parent="whiteStatus">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+
+</resources>

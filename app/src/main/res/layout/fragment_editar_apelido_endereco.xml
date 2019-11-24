@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".editarApelidoEnderecoFragment">
+
+    <LinearLayout
+        android:id="@+id/toolbarEditarApelido"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnVoltarEditarApelido"
+                style="@style/previusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/btnDoneEditarApelido"
+                style="@style/doneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarEditarApelido"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/H1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="De um apelido para seu endereço:" />
+
+        <EditText
+            android:id="@+id/txtApelidoEndereco"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/montserrat"
+            android:inputType="textCapWords"
+            android:textColor="@color/materialGray700"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnExcluirEndereco"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="36dp"
+                android:paddingEnd="36dp"
+                android:text="Excluir endereço"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnProximoApelidoEndereco"
+                style="@style/primaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="36dp"
+                android:paddingEnd="36dp"
+                android:text="pronto!" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

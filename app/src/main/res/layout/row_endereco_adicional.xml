@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/real_white_cornered"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/lblTitleEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Resende"
+            android:textColor="@color/materialGray900"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/lblEndAdc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblTitleEnd"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat"
+            android:text="Av. Jorge Zarur, Vila Ema, São José dos Campos, SP"
+            android:textColor="@color/materialGray400" />
+
+        <TextView
+            android:id="@+id/lat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btnEditarLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:layout_marginTop="-8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_more_vert_24dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/divisor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/materialGray200"
+        android:orientation="horizontal" />
+
+
+</LinearLayout>

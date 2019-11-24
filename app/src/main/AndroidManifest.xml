@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.werkhaizer.anjo">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/whiteStatus">
+        <activity android:name=".chatMedActivity"></activity>
+        <activity android:name=".editarHorarioConsultaActivity" />
+        <activity android:name=".editarDiaConsultaActivity" />
+        <activity android:name=".VerHorarioActivity" />
+        <activity android:name=".completarConvenioActivity" />
+        <activity android:name=".adicionarConvenioActivity" />
+        <activity android:name=".pesquisaMedicosActivity" />
+        <activity android:name=".editarEnderecoActivity" />
+        <activity
+            android:name=".filtrosListaConsultaActivity"
+            android:theme="@style/AppTheme.FloatingWindow" />
+        <activity android:name=".ConfirmarHorarioActivity" />
+        <activity android:name=".PerfilDisplayActivity" />
+        <activity android:name=".horariosDispActivity" />
+        <activity
+            android:name=".filtrosListaMedicoActivity"
+            android:theme="@style/AppTheme.FloatingWindow" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/blueStatus" />
+        <activity
+            android:name=".PerfilMedicoActivity"
+            android:theme="@style/whiteStatus" />
+        <activity
+            android:name=".PopupPerfilMedico"
+            android:theme="@style/AppTheme.FloatingWindow" />
+        <activity android:name=".intro_anjo" />
+        <activity
+            android:name=".EditarPerfil"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".completarCadastroActivity" />
+        <activity
+            android:name=".failActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fail"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".listaEspecialidadesActivity" />
+        <activity android:name=".localUsuarioActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <activity android:name=".cepActivity" />
+        <activity android:name=".completarEnderecoActivity" />
+    </application>
+
+</manifest>
