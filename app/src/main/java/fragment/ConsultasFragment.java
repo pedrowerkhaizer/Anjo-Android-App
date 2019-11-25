@@ -8,9 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
@@ -20,14 +17,9 @@ import com.werkhaizer.anjo.ConsultaAbertaContent;
 import com.werkhaizer.anjo.ConsultaProximaContent;
 import com.werkhaizer.anjo.filtrosListaConsultaActivity;
 
-import java.util.ArrayList;
-
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
-import model.Consultas;
 
-import static helper.UsuarioFirebase.getIdentificadorUsuario;
 import static utils.Vibrar.vibrar;
 
 public class ConsultasFragment extends Fragment {

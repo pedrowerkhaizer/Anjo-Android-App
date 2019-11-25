@@ -2,25 +2,19 @@ package fragment;
 
 
 import android.app.AlertDialog;
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.werkhaizer.anjo.ViewHolder.MedicosFavViewHolder;
 import com.werkhaizer.anjo.PerfilMedicoActivity;
 import com.werkhaizer.anjo.R;
-import com.werkhaizer.anjo.chatMedActivity;
+import com.werkhaizer.anjo.filtrosListaMedicoActivity;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -135,18 +129,11 @@ public class FavoritosFragment extends Fragment {
         });
 
         btnFiltroFav.setOnClickListener(v -> {
-//                Bundle bundle = getArguments();
-//                final String espMed = bundle.getString("title");
-//                Fragment fragment = new FiltrosFragment();
-//                bundle.putString("title", espMed);
-//                fragment.setArguments(bundle);
-//                FragmentManager manager = getFragmentManager();
-//                mRecyclerView.removeAllViews();
-//                manager.beginTransaction().replace(R.id.viewPager, fragment, fragment.getTag()).addToBackStack(null).commit();
-
-            //TODO FAZER O FILTRO DOS FAVORITOS
-            Toast.makeText(getContext(), "Criar um filtro p os favoritos", Toast.LENGTH_SHORT).show();
+            vibrar(getContext());
+            Intent i = new Intent(getContext(), filtrosListaMedicoActivity.class);
+            startActivity(i);
         });
+
 
         return view;
     }
@@ -204,50 +191,6 @@ public class FavoritosFragment extends Fragment {
                     @Override
                     public void onItemLongClick(View view, final int position) {
                         dialogOptions(view, getContext());
-
-//                        vibrar();
-//                        TextView crm_medTV = view.findViewById(R.id.crmMedFav);
-//                        final String crm_med = crm_medTV.getText().toString();
-//                        TextView espMedTV = view.findViewById(R.id.especialidadeMedFav);
-//                        final String espMed = espMedTV.getText().toString();
-//
-//                        FloatingActionButton delete = view.findViewById(R.id.civDelete);
-//                        FloatingActionButton perfil = view.findViewById(R.id.civPerfil);
-//                        final LinearLayout options = view.findViewById(R.id.rowOptions);
-//                        final LinearLayout principal = view.findViewById(R.id.rowPrincipal);
-//
-//                        options.setVisibility(View.VISIBLE);
-//                        options.setEnabled(true);
-//                        principal.setEnabled(false);
-//
-//                        delete.setOnClickListener(v -> {
-//                            vibrar();
-//                            MedSelecionado medSelecionado = new MedSelecionado();
-//                            medSelecionado.setCrm_med(crm_med);
-//                            options.setVisibility(View.GONE);
-//                            options.setEnabled(false);
-//                            medSelecionado.excluir();
-//                            listarFav();
-//                        });
-//
-//                        perfil.setOnClickListener(v -> {
-//                            vibrar();
-//                            Intent intent = new Intent(getContext(), PerfilMedicoActivity.class);
-//                            intent.putExtra("crm", crm_med);
-//                            intent.putExtra("espMed", espMed);
-//                            startActivity(intent);
-//                        });
-//
-//                        options.setOnClickListener(v -> {
-//                            vibrar();
-//                            options.setVisibility(View.GONE);
-//                            options.setEnabled(false);
-//                            principal.setEnabled(true);
-//                        });
-
-//                        Intent intent = new Intent(getContext(), PopupPerfilMedico.class);
-//                        intent.putExtra("crm", crm_med.toString());
-//                        intent.putExtra("espMed", espMed);
 //                        startActivity(intent);
                     }
 
@@ -255,47 +198,6 @@ public class FavoritosFragment extends Fragment {
                     public void onImageClick(View view, int position) {
                         vibrar(getContext());
                         dialogOptions(view, getContext());
-
-
-//                        vibrar();
-//                        TextView crm_medTV = view.findViewById(R.id.crmMedFav);
-//                        final String crm_med = crm_medTV.getText().toString();
-//                        TextView espMedTV = view.findViewById(R.id.especialidadeMedFav);
-//                        final String espMed = espMedTV.getText().toString();
-//
-//                        FloatingActionButton delete = view.findViewById(R.id.civDelete);
-//                        FloatingActionButton perfil = view.findViewById(R.id.civPerfil);
-//                        final LinearLayout options = view.findViewById(R.id.rowOptions);
-//                        final LinearLayout principal = view.findViewById(R.id.rowPrincipal);
-//
-//                        options.setVisibility(View.VISIBLE);
-//                        options.setEnabled(true);
-//                        principal.setEnabled(false);
-//
-//                        delete.setOnClickListener(v -> {
-//                            vibrar();
-//                            MedSelecionado medSelecionado = new MedSelecionado();
-//                            medSelecionado.setCrm_med(crm_med);
-//                            options.setVisibility(View.GONE);
-//                            options.setEnabled(false);
-//                            medSelecionado.excluir();
-//                            listarFav();
-//                        });
-//
-//                        perfil.setOnClickListener(v -> {
-//                            vibrar();
-//                            Intent intent = new Intent(getContext(), PerfilMedicoActivity.class);
-//                            intent.putExtra("crm", crm_med);
-//                            intent.putExtra("espMed", espMed);
-//                            startActivity(intent);
-//                        });
-//
-//                        options.setOnClickListener(v -> {
-//                            vibrar();
-//                            options.setVisibility(View.GONE);
-//                            options.setEnabled(false);
-//                            principal.setEnabled(true);
-//                        });
                     }
                 });
                 return medicosFavViewHolder;

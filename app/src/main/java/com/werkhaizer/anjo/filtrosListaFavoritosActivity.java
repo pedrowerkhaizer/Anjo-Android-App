@@ -1,5 +1,7 @@
 package com.werkhaizer.anjo;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -8,7 +10,6 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
@@ -16,30 +17,28 @@ import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import androidx.appcompat.app.AppCompatActivity;
-import utils.FragmentAtual;
 import utils.coordenadaSelecionada;
+import utils.filtroConsulta;
 import utils.filtroMedicos;
 
 import static utils.FragmentAtual.setConsulta;
 import static utils.FragmentAtual.setFavorito;
 import static utils.FragmentAtual.setMain;
 import static utils.FragmentAtual.setPerfil;
-import static utils.coordenadaSelecionada.*;
+import static utils.Vibrar.vibrar;
+import static utils.coordenadaSelecionada.getEnd;
 
-public class filtrosListaMedicoActivity extends AppCompatActivity {
-
+public class filtrosListaFavoritosActivity extends AppCompatActivity {
 
     private LinearLayout dist, av, local, sair;
     private Thread closeThread;
     private FloatingActionButton btnClose;
     private TextView tvLocalEsc;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_filtros);
+        setContentView(R.layout.activity_filtros_lista_favoritos);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -53,15 +52,15 @@ public class filtrosListaMedicoActivity extends AppCompatActivity {
         l.clearAnimation();
         l.startAnimation(anim);
 
-        btnClose = findViewById(R.id.btnCloseFiltro);
-        dist = findViewById(R.id.llMenorDist);
-        av = findViewById(R.id.llClassificacao);
-        tvLocalEsc = findViewById(R.id.txtLocalEscolhido);
-        sair = findViewById(R.id.sair_filtro_medicos);
+        btnClose = findViewById(R.id.btnCloseFiltroFav);
+        dist = findViewById(R.id.llMenorDistFav);
+        av = findViewById(R.id.llClassificacaoFav);
+        tvLocalEsc = findViewById(R.id.txtLocalEscolhidoFav);
+        sair = findViewById(R.id.sair_filtro_medicosFav);
 
-        setMain(true);
+        setMain(false);
         setConsulta(false);
-        setFavorito(false);
+        setFavorito(true);
         setPerfil(false);
 
 
@@ -75,7 +74,7 @@ public class filtrosListaMedicoActivity extends AppCompatActivity {
             filtroMedicos.setRating(false);
 
 //                fecharFiltro();
-            Intent i = new Intent(filtrosListaMedicoActivity.this, MainActivity.class);
+            Intent i = new Intent(filtrosListaFavoritosActivity.this, MainActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
         });
@@ -84,7 +83,7 @@ public class filtrosListaMedicoActivity extends AppCompatActivity {
             filtroMedicos.setDistancia(false);
 
 //                fecharFiltro();
-            Intent i = new Intent(filtrosListaMedicoActivity.this, MainActivity.class);
+            Intent i = new Intent(filtrosListaFavoritosActivity.this, MainActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
         });
@@ -92,10 +91,10 @@ public class filtrosListaMedicoActivity extends AppCompatActivity {
         local = findViewById(R.id.llBuscar);
         local.setOnClickListener(v -> {
             vibrar();
-            Intent intent = new Intent(filtrosListaMedicoActivity.this, localUsuarioActivity.class);
+            Intent intent = new Intent(filtrosListaFavoritosActivity.this, localUsuarioActivity.class);
 //                intent.putExtra("lista", "lista");
             startActivity(intent);
-            filtrosListaMedicoActivity.this.finish();
+            filtrosListaFavoritosActivity.this.finish();
         });
 
         btnClose.setOnClickListener(v -> fecharFiltro());
@@ -106,7 +105,7 @@ public class filtrosListaMedicoActivity extends AppCompatActivity {
     private void fecharFiltro() {
         vibrar();
         final LinearLayout lf = findViewById(R.id.llFiltros);
-        Animation anim = AnimationUtils.loadAnimation(filtrosListaMedicoActivity.this, R.anim.filter_back_translate);
+        Animation anim = AnimationUtils.loadAnimation(filtrosListaFavoritosActivity.this, R.anim.filter_back_translate);
         anim.reset();
         lf.clearAnimation();
         lf.startAnimation(anim);

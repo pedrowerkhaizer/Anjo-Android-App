@@ -17,7 +17,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/whiteStatus">
-        <activity android:name=".chatMedActivity"></activity>
+        <activity android:name=".filtrosListaFavoritosActivity"></activity>
+        <activity android:name=".chatMedActivity" />
         <activity android:name=".editarHorarioConsultaActivity" />
         <activity android:name=".editarDiaConsultaActivity" />
         <activity android:name=".VerHorarioActivity" />
