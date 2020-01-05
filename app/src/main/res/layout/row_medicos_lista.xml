@@ -8,11 +8,13 @@
     android:background="?android:attr/selectableItemBackground"
     android:orientation="horizontal">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="124dp"
         android:background="?android:attr/selectableItemBackground"
         android:orientation="horizontal">
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/foto_med"
@@ -116,7 +118,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
     <TextView
         android:id="@+id/lat_med"
         android:layout_width="wrap_content"

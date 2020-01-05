@@ -8,7 +8,6 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
@@ -17,8 +16,6 @@ import android.widget.TextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-import utils.FragmentAtual;
-import utils.coordenadaSelecionada;
 import utils.filtroMedicos;
 
 import static utils.FragmentAtual.setConsulta;
@@ -52,6 +49,7 @@ public class filtrosListaMedicoActivity extends AppCompatActivity {
         anim.reset();
         l.clearAnimation();
         l.startAnimation(anim);
+
 
         btnClose = findViewById(R.id.btnCloseFiltro);
         dist = findViewById(R.id.llMenorDist);
