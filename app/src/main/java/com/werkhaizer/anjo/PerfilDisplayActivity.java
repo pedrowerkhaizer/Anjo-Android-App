@@ -70,12 +70,9 @@ public class PerfilDisplayActivity extends AppCompatActivity {
             }
         });
 
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                vibrar();
-                PerfilDisplayActivity.this.finish();
-            }
+        btnVoltar.setOnClickListener(v -> {
+            vibrar();
+            PerfilDisplayActivity.this.finish();
         });
     }
     private void vibrar() {
